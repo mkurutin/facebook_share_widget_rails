@@ -27,7 +27,7 @@ class @FacebookShareWidget
         json = $.parseJSON(jqXHR.responseText)
         console.debug(json.message)
 
-    $('input.search-text', @container).keydown (event) =>
+    $('input.search-text', @container).keyup (event) =>
       this.filter_list()
       #throttle(self, this.filter_list, this.throttleRate)
     
